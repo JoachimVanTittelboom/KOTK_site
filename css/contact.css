@@ -1,0 +1,92 @@
+:root {
+  --contact-color: rgb(245, 160, 81);
+}
+
+.contact-container {
+  display: flex;
+  margin: 2rem auto;
+  border: 0.05rem solid var(--contact-color);
+  border-radius: 0.2rem;
+}
+
+.inner-contact-container {
+  flex: 3;
+}
+
+.contact-form {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+}
+
+.contact-form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-text-area {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.contact-form-input {
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+.send-button {
+  margin: 1rem auto;
+  padding: 0.2rem 3rem;
+  cursor: pointer;
+  background-color: var(--contact-color);
+  border: none;
+  border-radius: 0.2rem;
+  font-weight: 600;
+}
+
+.send-button:hover {
+  background-color: orange;
+}
+
+.send-button:active {
+  scale: 1.1;
+}
+
+.contact-info-container {
+  flex: 1.5;
+  background-color: var(--contact-color);
+}
+
+.inner-contact-info-container {
+  padding: 1rem;
+}
+
+.contact-title {
+  text-align: center;
+  color: rgb(78, 77, 77);
+}
+
+.contact-item {
+  margin: 1.5rem auto;
+  color: rgb(78, 77, 77);
+}
+
+.contact-info {
+  margin: 0 1rem;
+}
+
+.fa-phone,
+.fa-envelope,
+.fa-facebook {
+  color: rgb(78, 77, 77);
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-container {
+    display: block;
+  }
+
+  .contact-info {
+    font-size: calc(1rem + 0.390625vw);
+  }
+}

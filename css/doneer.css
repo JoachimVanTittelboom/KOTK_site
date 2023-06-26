@@ -1,0 +1,40 @@
+.hulp-title {
+  margin: 3rem auto;
+  width: 100%;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.gift-title {
+  margin: 2rem auto;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.support {
+  margin: 2rem auto;
+}
+
+.donation {
+  cursor: pointer;
+  text-decoration: underline;
+  color: orange;
+}
+
+.donation-item {
+  margin: 1rem auto;
+}
+
+.donation-wrapper {
+  display: flex;
+}
+
+.kotk-logo {
+  width: 45.6rem;
+  height: 30rem;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}

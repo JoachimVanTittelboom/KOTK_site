@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/doneer.css" />
+    <script src="https://kit.fontawesome.com/4a8d0c2d71.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- page content -->
+    <nav>
+      <div class="wrapper">
+        <div class="toggle_btn"><i class="fa-solid fa-bars icon"></i></div>
+        <ul class="wide_menu">
+          <li class="nav-item"><a href="../index.html">Home</a></li>
+          <li class="nav-item"><a href="activiteiten.html">Activiteiten</a></li>
+          <li class="nav-item"><a href="over_ons.html">Over ons</a></li>
+          <li class="nav-item"><a href="doneer.html">Doneer</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="../index.html">
+          <img class="logo" src="../images/4DC_logo.png" alt="The 4 days cruisers"/>
+        </a>
+      </div>
+
+      <div class="dropdown_menu">
+        <ul>
+          <li class="nav-item"><a href="../index.html">Home</a></li>
+          <li class="nav-item"><a href="activiteiten.html">Activiteiten</a></li>
+          <li class="nav-item"><a href="over_ons.html">Over ons</a></li>
+          <li class="nav-item"><a href="doneer.html">Doneer</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="content">
+      <h1 class="hulp-title">Jouw hulp is welkom</h1>
+      <div>
+        <h2 class="gift-title">Elke gift telt!</h2>
+        <p>
+          Giften helpen ons een heel eind op weg bij het inzamelen van het startgeld voor de 1000
+          km. Vanaf 40 euro per jaar is de gift voor 45% fiscaal aftrekbaar. Noteer die gift op
+          basis van het fiscaal attest van Kom op tegen kanker, op je belastingaangifte en betaal op
+          die manier minder personenbelasting. voorbeeld: 40 euro (gift aan Kom op tegen kanker) -
+          18 euro (belastingvoordeel) = 22 euro (feitelijk uitgegeven).
+        </p>
+        <p class="support">Wil je ons team steunen, dan kan dit door:</p>
+        <ul class="fa-ul">
+          <li class="donation-item">
+            <span class="fa-li ribbon-icon"><i class="fa-solid fa-ribbon "></i></span>
+            <a>
+              Een gift over te schrijven op het rekeningnummer van Kom op tegen Kanker BE14 7331
+              9999 9983 met vermelding van: "GIFT 1700XXXXX" (belangrijk!) De code linkt jouw gift
+              aan ons team en het woord GIFT zorgt dat je het volgend kalenderjaar een fiscaal
+              attest ontvangt indien het bedrag minstens 40 euro bedraagt.
+            </a>
+          </li>
+          <li class="donation-item">
+            <span class="fa-li"><i class="fa-solid fa-ribbon ribbon-icon"></i></span>
+            <a href="https://www.komoptegenkanker.be/doe-een-gift" target="_blank" class="donation"
+              ></i>Online een gift te doen via de knop van ons team op
+              de website van 1000 km voor Kom op tegen kanker.</a
+            >    
+          </li>
+        </ul>
+      </div>
+
+      <img class="kotk-logo" src="../images/logo_ktok.jpg" alt="logo kom op tegen kanker."/>
+    </div>
+
+    <footer>
+      <div class="copyright">
+        <p>© 2023 | The 4 days cruisers | Alle rechten voorbehouden.</p>
+      </div>
+    </footer>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropdownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropdownMenu.classList.toggle("open");
+        const isOpen = dropdownMenu.classList.contains("open");
+        toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark icon" : "fas fa-bars icon";
+      };
+    </script>
+  </body>
+</html>
