@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/contact.css" />
     <script src="https://kit.fontawesome.com/4a8d0c2d71.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </head>
   <body>
     <!-- page content -->
@@ -42,22 +43,22 @@
             <form>
               <div class="contact-form-item">
                 <label>Naam</label>
-                <input required class="contact-form-input" />
+                <input required class="contact-form-input name" />
               </div>
               <div class="contact-form-item">
                 <label>Email</label>
-                <input required type="email" class="contact-form-input" />
+                <input required type="email" class="contact-form-input email" />
               </div>
               <div class="contact-form-item">
                 <label>Onderwerp</label>
-                <input required class="contact-form-input" />
+                <input required class="contact-form-input subject" />
               </div>
               <div class="contact-form-item">
                 <label>Beschrijving</label>
                 <textarea required class="contact-form-text-area" rows="6"></textarea>
               </div>
               <div class="contact-form-item">
-                <button type="submit" class="send-button">Verstuur</button>
+                <button class="send-button">Verstuur</button>
               </div>
             </form>
           </div>
@@ -106,6 +107,41 @@
         dropdownMenu.classList.toggle("open");
         const isOpen = dropdownMenu.classList.contains("open");
         toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark icon" : "fas fa-bars icon";
+      };
+
+      const contactName = document.querySelector(".name");
+      const email = document.querySelector(".email");
+      const subject = document.querySelector(".subject");
+      const description = document.querySelector(".contact-form-text-area");
+
+      const sendBtn = document.querySelector(".send-button");
+      sendBtn.onclick = function (event) {
+        event.preventDefault();
+
+        console.log(contactName.value);
+        console.log(email.value);
+        console.log(subject.value);
+        console.log(description.value);
+        sendEmail(contactName.value, email.value, subject.value, description.value);
+      };
+
+      const sendEmail = (name, email, subject, description) => {
+        const recipient = "recipient@example.com";
+        const body = "This is the body of the email";
+
+        const mailtoLink = `mailto:info@the4dayscruisers.be?subject=${encodeURIComponent(
+          subject
+        )}&body=${encodeURIComponent(description)}`;
+
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "joachimvantittelboom@hotmail.com",
+          Password: "Samsungnote2*",
+          To: "info@the4dayscruisers.be",
+          From: email,
+          Subject: "This is the subject",
+          Body: "And this is the body",
+        }).then((message) => alert(message));
       };
     </script>
   </body>
