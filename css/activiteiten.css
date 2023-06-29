@@ -12,7 +12,7 @@
   padding: 1rem 2.5rem;
   position: relative;
   width: 50%;
-  animation: movedown 1s linear forwards;
+  animation: movedown 500ms linear forwards;
 }
 /* .timeline-container:nth-child(1) {
   animation-delay: 0s;
@@ -88,7 +88,7 @@
   top: 0;
   left: 50%;
   margin-left: -3px;
-  animation: moveline 3s linear forwards;
+  animation: movedown 500ms linear forwards;
 }
 
 .timeline-image {
