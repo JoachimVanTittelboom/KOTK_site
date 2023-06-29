@@ -100,22 +100,22 @@
     </footer>
 
     <script>
-      const toggleBtn = document.querySelector(".toggle_btn");
-      const toggleBtnIcon = document.querySelector(".toggle_btn i");
-      const dropdownMenu = document.querySelector(".dropdown_menu");
+      const toggleBtn = document.querySelector('.toggle_btn');
+      const toggleBtnIcon = document.querySelector('.toggle_btn i');
+      const dropdownMenu = document.querySelector('.dropdown_menu');
 
       toggleBtn.onclick = function () {
-        dropdownMenu.classList.toggle("open");
-        const isOpen = dropdownMenu.classList.contains("open");
-        toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark icon" : "fas fa-bars icon";
+        dropdownMenu.classList.toggle('open');
+        const isOpen = dropdownMenu.classList.contains('open');
+        toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark icon' : 'fas fa-bars icon';
       };
 
-      const contactName = document.querySelector(".name");
-      const email = document.querySelector(".email");
-      const subject = document.querySelector(".subject");
-      const description = document.querySelector(".contact-form-text-area");
+      const contactName = document.querySelector('.name');
+      const email = document.querySelector('.email');
+      const subject = document.querySelector('.subject');
+      const description = document.querySelector('.contact-form-text-area');
 
-      const sendBtn = document.querySelector(".send-button");
+      const sendBtn = document.querySelector('.send-button');
       sendBtn.onclick = function (event) {
         event.preventDefault();
 
@@ -127,22 +127,17 @@
       };
 
       const sendEmail = (name, email, subject, description) => {
-        const recipient = "recipient@example.com";
-        const body = "This is the body of the email";
-
         const mailtoLink = `mailto:info@the4dayscruisers.be?subject=${encodeURIComponent(
           subject
         )}&body=${encodeURIComponent(description)}`;
-
-        Email.send({
-          Host: "smtp.elasticemail.com",
-          Username: "joachimvantittelboom@hotmail.com",
-          Password: "Samsungnote2*",
-          To: "info@the4dayscruisers.be",
-          From: email,
-          Subject: "This is the subject",
-          Body: "And this is the body",
-        }).then((message) => alert(message));
+        window.location.href = mailtoLink;
+        // Email.send({
+        //   SecureToken: 'b9f4e853-461f-4774-9b05-c846a65fa66f',
+        //   To: 'joachimvantittelboom@hotmail.com',
+        //   From: email,
+        //   Subject: 'This is the subject',
+        //   Body: 'And this is the body',
+        // }).then((message) => alert(message));
       };
     </script>
   </body>
