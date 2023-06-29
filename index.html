@@ -14,11 +14,21 @@
       <div class="wrapper">
         <div class="toggle_btn"><i class="fa-solid fa-bars icon"></i></div>
         <ul class="wide_menu">
-          <li class="nav-item"><a href="index.html">Home</a></li>
-          <li class="nav-item"><a href="html/activiteiten.html">Activiteiten</a></li>
-          <li class="nav-item"><a href="html/over_ons.html">Over ons</a></li>
-          <li class="nav-item"><a href="html/doneer.html">Doneer</a></li>
-          <li class="nav-item"><a href="html/contact.html">Contact</a></li>
+          <li class="nav-item">
+            <a href="index.html"><p>Home</p></a>
+          </li>
+          <li class="nav-item">
+            <a href="html/activiteiten.html"><p>Activiteiten</p></a>
+          </li>
+          <li class="nav-item">
+            <a href="html/over_ons.html"><p>Over ons</p></a>
+          </li>
+          <li class="nav-item">
+            <a href="html/doneer.html"><p>Doneer</p></a>
+          </li>
+          <li class="nav-item">
+            <a href="html/contact.html"><p>Contact</p></a>
+          </li>
         </ul>
         <a href="index.html"
           ><img class="logo" src="./images/4DC_logo.png" alt="The 4 days cruisers"
@@ -27,11 +37,21 @@
 
       <div class="dropdown_menu">
         <ul>
-          <li class="nav-item"><a href="index.html">Home</a></li>
-          <li class="nav-item"><a href="html/activiteiten.html">Activiteiten</a></li>
-          <li class="nav-item"><a href="html/over_ons.html">Over ons</a></li>
-          <li class="nav-item"><a href="html/doneer.html">Doneer</a></li>
-          <li class="nav-item"><a href="html/contact.html">Contact</a></li>
+          <li class="nav-item">
+            <a href="index.html"><p>Home</p></a>
+          </li>
+          <li class="nav-item">
+            <a href="html/activiteiten.html"><p>Activiteiten</p></a>
+          </li>
+          <li class="nav-item">
+            <a href="html/over_ons.html"><p>Over ons</p></a>
+          </li>
+          <li class="nav-item">
+            <a href="html/doneer.html"><p>Doneer</p></a>
+          </li>
+          <li class="nav-item">
+            <a href="html/contact.html"><p>Contact</p></a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -42,7 +62,7 @@
           src="./images/DTK23_Algemeen 1920x1010-1.jpg"
           alt="Kom op tegen kanker"
         />
-        <a href="./html/activiteiten.html" class="activities-button">Activiteiten</a>
+        <a href="./html/activiteiten.html" class="activities-button"><p>Activiteiten</p></a>
       </div>
     </div>
 
@@ -53,14 +73,14 @@
     </footer>
 
     <script>
-      const toggleBtn = document.querySelector(".toggle_btn");
-      const toggleBtnIcon = document.querySelector(".toggle_btn i");
-      const dropdownMenu = document.querySelector(".dropdown_menu");
+      const toggleBtn = document.querySelector('.toggle_btn');
+      const toggleBtnIcon = document.querySelector('.toggle_btn i');
+      const dropdownMenu = document.querySelector('.dropdown_menu');
 
       toggleBtn.onclick = function () {
-        dropdownMenu.classList.toggle("open");
-        const isOpen = dropdownMenu.classList.contains("open");
-        toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark icon" : "fas fa-bars icon";
+        dropdownMenu.classList.toggle('open');
+        const isOpen = dropdownMenu.classList.contains('open');
+        toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark icon' : 'fas fa-bars icon';
       };
     </script>
   </body>

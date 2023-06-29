@@ -4,13 +4,13 @@
   font-weight: bolder;
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .gift-title {
   margin: 2rem auto;
   font-weight: bolder;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .support {
