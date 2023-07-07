@@ -117,21 +117,24 @@
 
       const sendBtn = document.querySelector('.send-button');
       sendBtn.onclick = function (event) {
+        event.preventDefault();
         sendEmail(contactName.value, email.value, subject.value, description.value);
       };
 
       const sendEmail = (name, email, subject, description) => {
-        const mailtoLink = `mailto:info@the4dayscruisers.be?subject=${encodeURIComponent(
-          subject
-        )}&body=${encodeURIComponent(description)}`;
-        window.location.href = mailtoLink;
-        // Email.send({
-        //   SecureToken: 'b9f4e853-461f-4774-9b05-c846a65fa66f',
-        //   To: 'joachimvantittelboom@hotmail.com',
-        //   From: email,
-        //   Subject: 'This is the subject',
-        //   Body: 'And this is the body',
-        // }).then((message) => alert(message));
+        // const mailtoLink = `mailto:info@the4dayscruisers.be?subject=${encodeURIComponent(
+        //   subject
+        // )}&body=${encodeURIComponent(description)}`;
+        // window.location.href = mailtoLink;
+        Email.send({
+          SecureToken: 'b9f4e853-461f-4774-9b05-c846a65fa66f',
+          To: 'the4dayscruisers@outlook.com',
+          From: email,
+          Subject: 'This is the subject',
+          Body: 'And this is the body',
+        }).then((message) => {
+          alert(message);
+        });
       };
     </script>
   </body>
