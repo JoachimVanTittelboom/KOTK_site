@@ -122,19 +122,19 @@
       };
 
       const sendEmail = (name, email, subject, description) => {
-        // const mailtoLink = `mailto:info@the4dayscruisers.be?subject=${encodeURIComponent(
-        //   subject
-        // )}&body=${encodeURIComponent(description)}`;
-        // window.location.href = mailtoLink;
-        Email.send({
-          SecureToken: 'b9f4e853-461f-4774-9b05-c846a65fa66f',
-          To: 'the4dayscruisers@outlook.com',
-          From: email,
-          Subject: 'This is the subject',
-          Body: 'And this is the body',
-        }).then((message) => {
-          alert(message);
-        });
+        const mailtoLink = `mailto:info@the4dayscruisers.be?subject=${encodeURIComponent(
+          subject
+        )}&body=${encodeURIComponent(description)}`;
+        window.location.href = mailtoLink;
+        // Email.send({
+        //   SecureToken: 'b9f4e853-461f-4774-9b05-c846a65fa66f',
+        //   To: 'the4dayscruisers@outlook.com',
+        //   From: email,
+        //   Subject: 'This is the subject',
+        //   Body: 'And this is the body',
+        // }).then((message) => {
+        //   alert(message);
+        // });
       };
     </script>
   </body>

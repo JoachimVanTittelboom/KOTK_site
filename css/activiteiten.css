@@ -1,5 +1,5 @@
 :root {
-  --grey: rgb(245, 160, 81);
+  --grey: rgb(255, 197, 142);
 }
 
 .timeline {
@@ -96,6 +96,7 @@
   height: 309px;
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
 }
 /* 
 @keyframes moveline {
